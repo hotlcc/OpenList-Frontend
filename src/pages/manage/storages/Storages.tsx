@@ -60,6 +60,9 @@ const Storages = () => {
         return true
       }
       return selectedDrivers().includes(storage.driver)
+    }).map((storage) => {
+      storage.status = t(`storages.table-fields.status.${storage.disabled ? "disabled" : "work"}`)
+      return storage
     })
   })
   const [layout, setLayout] = createStorageSignal(
@@ -103,7 +106,7 @@ const Storages = () => {
             multiple
             value={selectedDrivers()}
             onChange={setSelectedDrivers}
-            // variant="outline"
+          // variant="outline"
           >
             <SelectTrigger>
               <SelectPlaceholder>
