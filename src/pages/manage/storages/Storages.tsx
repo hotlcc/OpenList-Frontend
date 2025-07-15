@@ -61,7 +61,7 @@ const Storages = () => {
       }
       return selectedDrivers().includes(storage.driver)
     }).map((storage) => {
-      storage.status = t(`storages.table-fields.status.${storage.disabled ? "disabled" : "work"}`)
+      storage.status = t(`storages.table-fields.status.${storage.status}`) || storage.status
       return storage
     })
   })
