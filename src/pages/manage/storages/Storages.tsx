@@ -60,9 +60,6 @@ const Storages = () => {
         return true
       }
       return selectedDrivers().includes(storage.driver)
-    }).map((storage) => {
-      storage.status = t(`storages.table-fields.status.${storage.status}`) || storage.status
-      return storage
     })
   })
   const [layout, setLayout] = createStorageSignal(
