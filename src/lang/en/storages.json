@@ -38,7 +38,7 @@
     "enable_sign": "Enable sign",
     "disable_index": "Disable index"
   },
-  "table-fields": {
+  "table_fields": {
     "status": {
       "work": "Work",
       "disabled": "Disabled"
